@@ -1,33 +1,27 @@
 import React from 'react'
 
-function Cards({username,btntext}){
+function Card({username, btntext="check me"}) {
     console.log(username);
-    
   return (
-        <div className="max-w-xs rounded-md shadow-md bg-black text-gray-100">
-      <img
-        src="https://picsum.photos/301"
-        alt=""
-        className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500"
-      />
-      <div className="flex flex-col justify-between p-6 space-y-8">
-        <div className="space-y-2">
-          <h2 className="text-3xl font-semibold tracking-wide">{username}</h2>
-          <p className="text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-            tempora ipsum soluta amet corporis accusantium aliquid consectetur
-            eaque!
-          </p>
-        </div>
-        <button
-          type="button"
-          className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-gray-800 text-gray-200"
-        >
-          {btntext}
-        </button>
-      </div>
-    </div>
+    <div className="relative h-[400px] w-[300px] rounded-md ">
+  <img
+    src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
+    alt="AirMax Pro"
+    className="z-0 h-full w-full rounded-md object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+  <div className="absolute bottom-4 left-4 text-left">
+    <h1 className="text-lg font-semibold text-white">{username}</h1>
+    <p className="mt-2 text-sm text-gray-300">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+      debitis?
+    </p>
+    <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-black bg-amber-300 px-4 py-2 rounded-md">
+      {btntext} →
+    </button>
+  </div>
+</div>
   )
 }
 
-export default Cards
+export default Card

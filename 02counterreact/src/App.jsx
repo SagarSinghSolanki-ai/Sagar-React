@@ -1,52 +1,25 @@
-// import { useState } from "react";
-
-// function App() {
-//   let [counter , setcounter] = useState(0);
-//   const addvalue = () => {
-//     counter = counter+1;
-//     if(counter<=20 && counter>=0){
-//       setcounter(counter)
-//     }
-//   }
-//   const removevalue = () => {
-//     counter = counter-1;
-//     if(counter<=20 && counter>=0){
-//       setcounter(counter)
-//     }
-//   }
-//   return (
-//     <>
-//       <h1>hey there</h1>
-//       <h2>counter {counter}</h2>
-//       <button onClick={addvalue}>add value</button>
-//       <button onClick={removevalue}>remove value</button>
-//     </>
-//   )
-// }
-
-// export default App
-
 import { useState } from "react";
 
-export default function App(){
-  let [counter,setcounter] = useState(0);
-
+function App(){
+  let [counter , setcounter] = useState(0);
   const addvalue = () => {
-    counter = counter + 1;
-    setcounter(counter);
+    setcounter(prevcounter => prevcounter+1);
+    setcounter(prevcounter => prevcounter+1);
+    setcounter(prevcounter => prevcounter+1);
   }
-
   const subvalue = () => {
-    counter = counter - 1;
-    setcounter(counter);
+    setcounter(prevcounter => prevcounter-1);
+    setcounter(prevcounter => prevcounter-1);
+    setcounter(prevcounter => prevcounter-1);
   }
-
-  return(
+  return (
     <>
-    <h1>hey there</h1>
-    <h2>counter {counter}</h2>
-    <button onClick={addvalue}>adding</button>
-    <button onClick={subvalue}>subtracting</button>
+    <h1 className="text-3xl text-amber-500">hey i am here to increment and decrement the counter</h1>
+    <h1>Counter {counter}</h1>
+    <button className='p-4 bg-amber-950 text-3xl rounded-3xl text-white'  onClick={addvalue}>increment</button>
+    <button className="p-4"   onClick={subvalue}>decrement</button>
     </>
-  );
+  )
 }
+
+export default App;

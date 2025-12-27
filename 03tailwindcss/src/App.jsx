@@ -8,9 +8,10 @@ function App() {
 
   return (
     <>
-      <h1 className='bg-green-400 , mb-4'>Tailwind test</h1>
-      <Cards username="sagar" btntext="visit me"/>
-      <Cards username="nikhil" btntext="read me"/>
+      <h1 className='bg-amber-50 mb-4'>Tailwind test</h1>
+      <Cards username="Sagar" btntext="visit me"/>
+      <br></br>
+      <Cards username="Nikhil" />
     </>
   )
 }
